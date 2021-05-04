@@ -23,6 +23,10 @@ const schema = buildSchema(`
         title: String!
         content: String!
     }
+    type Query {
+        getAllUsers: [User]
+        getUser(id: ID): User
+    }
 `)
 
 module.export = schema
