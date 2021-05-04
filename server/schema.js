@@ -12,6 +12,17 @@ const schema = buildSchema(`
         title: String
         content: String
     }
+    input UserInput{
+        id: ID
+        username: String!
+        age: Int!
+        post: [Post]
+    }
+    input PostInput {
+        id: ID
+        title: String!
+        content: String!
+    }
 `)
 
 module.export = schema
