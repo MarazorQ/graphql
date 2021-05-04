@@ -19,7 +19,8 @@ const root = {
 
 app.use('/graphql', graphqlHTTP({
     graphiql: true,
-    schema
+    schema,
+    rootValue: root
 }))
 
 app.listen(PORT, ()=>console.log('Server is run on ', PORT))
